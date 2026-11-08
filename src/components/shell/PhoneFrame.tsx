@@ -22,12 +22,11 @@ export function PhoneFrame({ children }: { children: ReactNode }) {
   const url = useSyncExternalStore(noop, () => window.location.origin + pathname, () => "");
 
   if (ancho) {
-    return (
-      <div id={PHONE_ROOT_ID} className="relative min-h-dvh w-full bg-background">
+    return (      <div className="relative min-h-dvh w-full bg-background">
         {children}
+        <div id={PHONE_ROOT_ID} className="pointer-events-none fixed inset-0 z-50 [&>*]:pointer-events-auto" />
       </div>
-    );
-  }
+
 
   return (
     <div className="min-h-dvh md:flex md:items-center md:justify-center md:gap-10 md:bg-crema lg:gap-16 md:p-4">
