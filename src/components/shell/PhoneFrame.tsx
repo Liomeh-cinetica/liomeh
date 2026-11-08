@@ -25,6 +25,8 @@ export function PhoneFrame({ children }: { children: ReactNode }) {
     return (
       <div id={PHONE_ROOT_ID} className="relative min-h-dvh w-full bg-background">
         {children}
+        <div id={PHONE_ROOT_ID} className="pointer-events-none fixed inset-0 z-50 [&>*]:pointer-events-auto" />
+
       </div>
     );
   }
