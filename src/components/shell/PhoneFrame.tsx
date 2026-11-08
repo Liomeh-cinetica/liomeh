@@ -23,7 +23,7 @@ export function PhoneFrame({ children }: { children: ReactNode }) {
 
   if (ancho) {
     return (
-      <div id={PHONE_ROOT_ID} className="relative min-h-dvh w-full bg-background">
+      <div className="relative min-h-dvh w-full bg-background">
         {children}
       </div>
     );
